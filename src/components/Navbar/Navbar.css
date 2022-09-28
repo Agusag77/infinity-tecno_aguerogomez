@@ -1,0 +1,16 @@
+
+.logo {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 4rem;
+}
+
+.container-fluid {
+    background-color: rgba(180, 175, 168, 0.807);
+    padding: 1rem;
+}
+
+nav .nav {
+    padding-left: 2rem;
+    gap: 2rem;
+}

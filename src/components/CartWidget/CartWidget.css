@@ -1,0 +1,20 @@
+
+.CartWidget {
+    width: 39px;
+    height: 38px;
+    position: relative;
+    display: inline-block;
+}
+
+.CartWidget .ContadorCarrito {
+    position: absolute;
+    top: -8px;
+    right: -9px;
+    background-color: #fff;
+    padding: 1px 6px;
+    border-radius: 50%;
+    color: rgb(10, 10, 10);
+    font-weight: 700;
+    font-family: system-ui;
+    line-height: 18px;
+}
