@@ -1,0 +1,32 @@
+.ItemDetailContainer {
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.item-card {
+    display: flex;
+    width: 60rem;
+    height: 30rem;
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-radius: 0.3rem;
+}
+
+.body-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.img-card {
+    width: 60%;
+    height: 100%;
+}
+

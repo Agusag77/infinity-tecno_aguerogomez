@@ -14,3 +14,7 @@ nav .nav {
     padding-left: 2rem;
     gap: 2rem;
 }
+
+nav .nav .btn {
+    background-color: black;
+}
