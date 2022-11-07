@@ -20,7 +20,7 @@
 
 ## Vista previa del sitio
 
-
+![image](/public/images/infinity-tecno-final.gif)
 
 
 ## Instalacion en local
