@@ -5,6 +5,11 @@
     position: relative;
     display: inline-block;
     margin-right: 2rem;
+    cursor: pointer;
+}
+
+.CartWidget:hover {
+    transform: scale(1.2);
 }
 
 .CartWidget .ContadorCarrito {
