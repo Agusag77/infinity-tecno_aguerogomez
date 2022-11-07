@@ -1,8 +1,28 @@
 import './Navbar.css'
+import { useState, useEffect } from 'react'
 import CartWidget from '../CartWidget/CartWidget';
 import { NavLink } from 'react-router-dom';
+import { getDocs, collection, query, orderBy } from 'firebase/firestore'
+import { db } from '../../services/firebase'
 
 const Navbar = () => {
+    
+  const [categories, setCategories] = useState([])
+
+  useEffect(() => {
+    const collectionRef = query(collection(db, 'categories'), orderBy('order')) 
+
+    getDocs(collectionRef).then(response => {
+      const categoriesAdapted = response.docs.map(doc => {
+        const data = doc.data()
+        const id = doc.id
+
+        return { id, ...data}
+      })
+      setCategories(categoriesAdapted)
+    })
+  }, [])
+
     return (
         <nav className="container-fluid">
             <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -11,13 +31,13 @@ const Navbar = () => {
                 </NavLink>
                 <div className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                     <NavLink type="button" className="btn btn-dark" to='/'>Home</NavLink>
-                    <li className="dropdown">
-                   <a className="btn btn-dark dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
-                   <ul className="dropdown-menu">
-                       <li><NavLink className="dropdown-item" to={'/category/Apple'}>Apple</NavLink></li>
-                       <li><NavLink className="dropdown-item" to={'/category/Electronica'}>Electronica</NavLink></li>
-                       <li><NavLink className="dropdown-item" to={'/category/Gaming'}>Gaming</NavLink></li>
-                   </ul>
+                   <li className="dropdown">
+                   <NavLink className="btn btn-dark dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</NavLink> 
+                        <ul className="dropdown-menu">
+                            {
+                              categories.map(cat => (<NavLink className="dropdown-item" key={cat.id} to={`/category/${cat.slug}`} >{cat.label}</NavLink>))
+                            }
+                        </ul>
                    </li> 
                     <NavLink type="button" className="btn btn-dark">Contacto</NavLink>
                 </div>
