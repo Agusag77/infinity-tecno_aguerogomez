@@ -1,7 +1,3 @@
-# Introducción al avance del proyecto:
-
-![image](https://github.com/Agusag77/inifinity-tecno_aguerogomez/blob/master/public/images/avance-proyecto.GIF)
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
