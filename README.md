@@ -20,7 +20,7 @@
 
 ## Vista previa del sitio
 
-![image](https://github.com/Agusag77/inifinity-tecno_aguerogomez/blob/master/public/images/infinity-tecno-final.GIF)
+
 
 
 ## Instalacion en local
